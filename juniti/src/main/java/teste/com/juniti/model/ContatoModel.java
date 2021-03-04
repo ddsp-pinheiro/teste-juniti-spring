@@ -1,4 +1,4 @@
-package teste.com.testeunitario.model;
+package teste.com.juniti.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

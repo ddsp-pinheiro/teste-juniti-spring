@@ -1,19 +1,18 @@
-package teste.com.testeunitario.contato;
+package teste.com.juniti.contato;
 
-import java.util.List;
 import javax.validation.ConstraintViolationException;
+
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Rules;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import teste.com.testeunitario.model.ContatoModel;
-import teste.com.testeunitario.repository.ContatoRepository;
+import teste.com.juniti.model.ContatoModel;
+import teste.com.juniti.repository.ContatoRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest // melhor testador de JPA
@@ -27,8 +26,9 @@ public class ContatosRepositoryIntegrationTest {
 		contato = new ContatoModel("Gabriel", "011y", "9xxxxxxx9");
 	}
 
-//regra, não aceita exceções, é a maneira de especificar //que a execução de um teste lançará uma exceção 
-//Verifica se o @NotEmpty está funcionando 
+	// regra, não aceita exceções, é a maneira de especificar //que a execução de um
+	// teste lançará uma exceção
+	// Verifica se o @NotEmpty está funcionando
 	@Rule
 	public ExpectedException esperadaExcecao = ExpectedException.none();
 
@@ -46,7 +46,6 @@ public class ContatosRepositoryIntegrationTest {
 		esperadaExcecao.expectMessage("O DDD deve ser preenchido");
 		contato.setDdd(null);
 		contatoRepository.save(contato);
-
 	}
 
 	@Test

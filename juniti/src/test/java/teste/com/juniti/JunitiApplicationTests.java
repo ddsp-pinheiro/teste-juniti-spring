@@ -1,10 +1,10 @@
-package teste.com.testeunitario;
+package teste.com.juniti;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TesteunitarioApplicationTests {
+class JunitiApplicationTests {
 
 	@Test
 	void contextLoads() {

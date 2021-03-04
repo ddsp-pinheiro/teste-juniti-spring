@@ -1,13 +1,13 @@
-package teste.com.testeunitario;
+package teste.com.juniti;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TesteunitarioApplication {
+public class JunitiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TesteunitarioApplication.class, args);
+		SpringApplication.run(JunitiApplication.class, args);
 	}
 
 }
